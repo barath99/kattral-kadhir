@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.npm-cache/
+
+*.log
+preview.html
+serve_dist.py
+
+.DS_Store
+Thumbs.db
