@@ -16,7 +16,7 @@ import {
   Users,
 } from 'lucide-react';
 
-const volunteerFormUrl = 'https://forms.gle/placeholder-kattral-kadhir-volunteer';
+const volunteerFormUrl = 'mailto:hello@kattralkadhir.org?subject=Volunteer%20with%20Kattral%20Kadhir';
 
 const navItems = [
   ['About', '#about'],
@@ -61,20 +61,17 @@ const roles = [
 
 const team = [
   {
-    name: 'Founding Member',
-    role: 'Program Lead',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80',
+    name: 'Barath Kumar',
+    role: 'Co-Founder',
+    detail: 'NIT Trichy graduate building Kattral Kadhir to expand technology and career exposure for students in Tamil Nadu.',
   },
-  {
-    name: 'Founding Member',
-    role: 'Curriculum Lead',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80',
-  },
-  {
-    name: 'Founding Member',
-    role: 'Partnerships Lead',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=700&q=80',
-  },
+];
+
+const statusItems = [
+  'Building the founding volunteer team',
+  'Partnering with schools in Tamil Nadu',
+  'Preparing pilot workshops',
+  'Launching first student sessions in 2026',
 ];
 
 const faqs = [
@@ -147,7 +144,7 @@ function Hero() {
             Ray of Learning for every curious student
           </p>
           <h1 className="mt-6 text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
-            Helping students meet the future with confidence.
+            Bringing AI, technology, and opportunity to every classroom.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
             Kattral Kadhir is a volunteer-led education initiative bringing AI literacy, digital skills, career exposure, and mentorship to school communities.
@@ -205,6 +202,27 @@ function About() {
   );
 }
 
+function WhyStarted() {
+  return (
+    <section className="bg-slate-50 px-5 py-20 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary-600">Why We Started</p>
+          <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">Exposure should not depend on where a student begins.</h2>
+        </div>
+        <div className="space-y-5 text-base leading-8 text-slate-600 sm:text-lg">
+          <p>
+            Growing up in Tamil Nadu, we saw how access to opportunities often depended on exposure. Many talented students never get the chance to interact with professionals, explore emerging technologies, or learn about pathways beyond their immediate environment.
+          </p>
+          <p>
+            Kattral Kadhir was started by NIT Trichy graduates to bridge that gap through mentorship, digital literacy, and practical AI education.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function VisionMission() {
   return (
     <section className="bg-slate-50 px-5 py-20 lg:px-8">
@@ -247,44 +265,45 @@ function WhatWeDo() {
   );
 }
 
+function CurrentStatus() {
+  return (
+    <section className="bg-slate-50 px-5 py-20 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading eyebrow="Current Status" title="Where we are today">
+          Kattral Kadhir is in its founding phase, with early volunteers and school conversations shaping our first pilot sessions.
+        </SectionHeading>
+        <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2">
+          {statusItems.map((item) => (
+            <div key={item} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+              <CheckCircle2 className="mt-0.5 shrink-0 text-primary-600" size={22} aria-hidden="true" />
+              <p className="font-medium leading-7 text-ink">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Impact() {
   return (
     <section id="impact" className="bg-primary-900 px-5 py-20 text-white lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary-100">First Session</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Early impact, built one session at a time.</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary-100">Pilot Sessions</p>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Early impact, built one honest session at a time.</h2>
             <p className="mt-5 leading-7 text-primary-100">
-              Our first sessions are designed to listen, learn, and refine. These placeholders can be updated with real photos and numbers as the initiative grows.
+              We are preparing our first pilot workshops for 2026. Impact metrics and real session photos will be shared only after our initial workshops are completed.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-3 text-center">
-            {[
-              ['50+', 'Students reached'],
-              ['12', 'Volunteers engaged'],
-              ['4', 'Learning themes'],
-            ].map(([number, label]) => (
-              <div key={label} className="rounded-lg bg-white/10 p-5 ring-1 ring-white/15">
-                <p className="text-3xl font-bold">{number}</p>
-                <p className="mt-2 text-xs font-medium uppercase tracking-[0.12em] text-primary-100">{label}</p>
-              </div>
-            ))}
+          <div className="rounded-lg bg-white/10 p-7 ring-1 ring-white/15">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-primary-100">Transparent by design</p>
+            <p className="mt-4 text-2xl font-bold">Launching our first pilot sessions in 2026.</p>
+            <p className="mt-4 leading-7 text-primary-100">
+              We will update this section with verified student reach, volunteer participation, school partners, and workshop outcomes once sessions are complete.
+            </p>
           </div>
-        </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {[
-            'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80',
-            'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80',
-            'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
-          ].map((src, index) => (
-            <img
-              key={src}
-              src={src}
-              alt={`Kattral Kadhir session placeholder ${index + 1}`}
-              className="aspect-[4/3] w-full rounded-lg object-cover ring-1 ring-white/15"
-            />
-          ))}
         </div>
       </div>
     </section>
@@ -297,6 +316,9 @@ function VolunteerRoles() {
       <SectionHeading eyebrow="Volunteer Roles" title="There is more than one way to help">
         Whether you enjoy teaching, planning, translating, designing, or coordinating, there is meaningful work to share.
       </SectionHeading>
+      <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-7 text-slate-600">
+        Our volunteer community includes students, educators, and professionals from leading organizations across technology, engineering, and finance.
+      </p>
       <div className="mx-auto mt-12 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {roles.map(([title, description, Icon]) => (
           <article key={title} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
@@ -322,16 +344,53 @@ function Team() {
   return (
     <section className="bg-white px-5 py-20 lg:px-8">
       <SectionHeading eyebrow="Founding Team" title="Led by people who believe access matters">
-        Replace these placeholders with the founding members, roles, and portraits when ready.
+        Kattral Kadhir is being built by NIT Trichy graduates who want students in Tamil Nadu to see wider possibilities earlier.
       </SectionHeading>
-      <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-3">
+      <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
         {team.map((member) => (
-          <article key={member.role} className="text-center">
-            <img src={member.image} alt={member.name} className="mx-auto aspect-square w-44 rounded-full object-cover shadow-soft" />
+          <article key={member.name} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="grid h-16 w-16 place-items-center rounded-full bg-primary-50 text-xl font-bold text-primary-700">
+              {member.name
+                .split(' ')
+                .map((part) => part[0])
+                .join('')}
+            </div>
             <h3 className="mt-5 text-lg font-bold text-ink">{member.name}</h3>
             <p className="mt-1 text-sm font-medium text-primary-700">{member.role}</p>
+            <p className="mt-4 text-sm leading-6 text-slate-600">{member.detail}</p>
           </article>
         ))}
+        <article className="rounded-lg border border-dashed border-primary-200 bg-primary-50 p-6">
+          <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-primary-700">
+            <Users size={26} aria-hidden="true" />
+          </div>
+          <h3 className="mt-5 text-lg font-bold text-ink">Co-Founder</h3>
+          <p className="mt-1 text-sm font-medium text-primary-700">Profile to be added</p>
+          <p className="mt-4 text-sm leading-6 text-slate-600">
+            The second co-founder profile will be added after name and role details are confirmed.
+          </p>
+        </article>
+      </div>
+    </section>
+  );
+}
+
+function ProfessionalNetwork() {
+  return (
+    <section className="bg-white px-5 py-20 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 rounded-lg border border-primary-100 bg-primary-50 p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary-600">Volunteer Network</p>
+          <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">A bridge between classrooms and working professionals.</h2>
+        </div>
+        <div className="space-y-5 text-base leading-8 text-slate-600 sm:text-lg">
+          <p>
+            Kattral Kadhir is shaped by volunteers who can bring real-world context into student learning, from technology and engineering to finance, design, and operations.
+          </p>
+          <p>
+            Instead of treating career exposure as a one-time talk, we want students to meet people who can make unfamiliar paths feel practical and reachable.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -409,10 +468,13 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <WhyStarted />
         <VisionMission />
         <WhatWeDo />
+        <CurrentStatus />
         <Impact />
         <VolunteerRoles />
+        <ProfessionalNetwork />
         <Team />
         <FAQ />
         <Contact />
