@@ -4,6 +4,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Cpu,
+  ExternalLink,
   GraduationCap,
   HandHeart,
   Languages,
@@ -62,8 +63,22 @@ const roles = [
 const team = [
   {
     name: 'Barath Kumar',
-    role: 'Co-Founder',
+    role: 'Founder',
     detail: 'NIT Trichy graduate building Kattral Kadhir to expand technology and career exposure for students in Tamil Nadu.',
+    image: '/barath2.jpeg',
+  },
+  {
+    name: 'Arvinth Saravanan',
+    role: 'Director, Strategy and Partnerships',
+    detail: 'NIT Trichy ECE classmate and Goldman Sachs oil analyst. CFA Level III completed, supporting strategy, partnerships, and long-term growth.',
+    image: '/arvinth.jpeg',
+  },
+  {
+    name: 'SP Sharan',
+    role: 'AI Advisor',
+    detail: 'NIT Trichy ECE classmate and direct PhD student at UT Austin, advising on AI curriculum, syllabus direction, and technical consultations.',
+    image: '/spsharan.jpeg',
+    profileUrl: 'https://scholar.google.com/citations?user=1NtGcNIAAAAJ&hl=en',
   },
 ];
 
@@ -344,32 +359,30 @@ function Team() {
   return (
     <section className="bg-white px-5 py-20 lg:px-8">
       <SectionHeading eyebrow="Founding Team" title="Led by people who believe access matters">
-        Kattral Kadhir is being built by NIT Trichy graduates who want students in Tamil Nadu to see wider possibilities earlier.
+        Kattral Kadhir is being built with support from NIT Trichy classmates who want students in Tamil Nadu to see wider possibilities earlier.
       </SectionHeading>
-      <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
+      <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
         {team.map((member) => (
-          <article key={member.name} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <div className="grid h-16 w-16 place-items-center rounded-full bg-primary-50 text-xl font-bold text-primary-700">
-              {member.name
-                .split(' ')
-                .map((part) => part[0])
-                .join('')}
+          <article key={member.name} className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+            <img className="aspect-[4/3] w-full object-cover" src={member.image} alt={member.name} />
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-ink">{member.name}</h3>
+              <p className="mt-1 text-sm font-medium text-primary-700">{member.role}</p>
+              <p className="mt-4 text-sm leading-6 text-slate-600">{member.detail}</p>
+              {member.profileUrl ? (
+                <a
+                  href={member.profileUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-700 transition hover:text-primary-800"
+                >
+                  Research profile
+                  <ExternalLink size={14} aria-hidden="true" />
+                </a>
+              ) : null}
             </div>
-            <h3 className="mt-5 text-lg font-bold text-ink">{member.name}</h3>
-            <p className="mt-1 text-sm font-medium text-primary-700">{member.role}</p>
-            <p className="mt-4 text-sm leading-6 text-slate-600">{member.detail}</p>
           </article>
         ))}
-        <article className="rounded-lg border border-dashed border-primary-200 bg-primary-50 p-6">
-          <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-primary-700">
-            <Users size={26} aria-hidden="true" />
-          </div>
-          <h3 className="mt-5 text-lg font-bold text-ink">Co-Founder</h3>
-          <p className="mt-1 text-sm font-medium text-primary-700">Profile to be added</p>
-          <p className="mt-4 text-sm leading-6 text-slate-600">
-            The second co-founder profile will be added after name and role details are confirmed.
-          </p>
-        </article>
       </div>
     </section>
   );
