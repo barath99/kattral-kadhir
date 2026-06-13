@@ -64,19 +64,19 @@ const team = [
   {
     name: 'Barath Kumar',
     role: 'Founder',
-    detail: 'NIT Trichy graduate building Kattral Kadhir to expand technology and career exposure for students in Tamil Nadu.',
+    detail: 'Software Engineer at Visa and NIT Trichy alumnus passionate about expanding access to technology, AI, and career opportunities for students. Founded this initiative to help bridge the exposure gap between industry and underserved classrooms.',
     image: '/barath2.jpeg',
   },
   {
     name: 'Arvinth Saravanan',
     role: 'Director, Strategy and Partnerships',
-    detail: 'NIT Trichy ECE classmate and Goldman Sachs oil analyst. CFA Level III completed, supporting strategy, partnerships, and long-term growth.',
+    detail: 'NIT Trichy alumnus, CFA Level III completer, and analyst at Goldman Sachs. Supports organizational strategy, partnerships, and long-term growth initiatives for Kattral Kadhir.',
     image: '/arvinth.jpeg',
   },
   {
     name: 'SP Sharan',
     role: 'AI Advisor',
-    detail: 'NIT Trichy ECE classmate and direct PhD student at UT Austin, advising on AI curriculum, syllabus direction, and technical consultations.',
+    detail: 'NIT Trichy alumnus and direct PhD scholar at the University of Texas at Austin specializing in Artificial Intelligence. Advises Kattral Kadhir on AI curriculum, technical direction, and emerging technology trends.',
     image: '/spsharan.jpeg',
     profileUrl: 'https://scholar.google.com/citations?user=1NtGcNIAAAAJ&hl=en',
   },
